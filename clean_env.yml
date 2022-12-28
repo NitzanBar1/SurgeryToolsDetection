@@ -30,7 +30,7 @@ dependencies:
   - brotlipy=0.7.0=py310h7f8727e_1002
   - bzip2=1.0.8=h7b6447c_0
   - c-ares=1.18.1=h7f98852_0
-  - ca-certificates=2022.12.7=ha878542_0
+  - ca-certificates=2022.07.19=h06a4308_0
   - cached-property=1.5.2=hd8ed1ab_1
   - cached_property=1.5.2=pyha770c72_1
   - cachetools=5.2.0=pyhd8ed1ab_0
@@ -217,6 +217,7 @@ dependencies:
   - responses=0.18.0=pyhd8ed1ab_0
   - rsa=4.9=pyhd8ed1ab_0
   - sacremoses=0.0.53=pyhd8ed1ab_0
+  - scikit-learn=1.1.1=py310h6a678d5_0
   - scipy=1.7.3=py310hfa59a62_0
   - setuptools=65.5.0=py310h06a4308_0
   - six=1.16.0=pyhd3eb1b0_1
@@ -229,6 +230,7 @@ dependencies:
   - tensorflow-base=2.10.0=mkl_py310hb9daa73_0
   - tensorflow-estimator=2.10.0=py310h06a4308_0
   - termcolor=2.1.1=pyhd8ed1ab_0
+  - threadpoolctl=2.2.0=pyh0d69192_0
   - tk=8.6.12=h1ccaba5_0
   - tokenizers=0.11.4=py310h3dcd8bd_1
   - torchaudio=0.13.0=py310_cu116
