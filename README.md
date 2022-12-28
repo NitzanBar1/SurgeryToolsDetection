@@ -21,8 +21,11 @@ This is a class project as part of 097222 Computer Vision Seminar @ Technion.
 ## Files in the repository
 |File name         | Purpsoe |
 |----------------------|------|
-|`EEGClassification.ipynb`| main file - Jupiter Notebook format|
-|`utils.py`| utils functions for loading and pre-processing the data|
+|`clean_env.yml`| conda enviornment file|
+|`predict.py`| predict on a single image|
+|`video.py`| predict on a single video|
+|`train_yolos.py`| train yolos model|
+|`my_coco_eval.py`| modified coco_eval file for evaluation|
 |`images`| Images used for preview in README.md file|
 
 
