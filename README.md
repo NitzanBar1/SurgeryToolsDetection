@@ -11,7 +11,7 @@ This is a class project as part of 097222 Computer Vision Seminar @ Technion.
 - [SurgeryToolsDetection](#surgery-tools-detection)
   * [Files in The Repository](#files-in-the-repository)
   * [Dataset](#dataset) 
-  * [Model](#model)
+  * [YOLOS Model](#yolos-model)
   * [Results](#results)
   * [References](#references)
 
