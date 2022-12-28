@@ -31,8 +31,8 @@ This is a class project as part of 097222 Computer Vision Seminar @ Technion.
 
 
 ## Dataset
-![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/vis.PNG)
-![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/insights.PNG)
+![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/vis.png)
+![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/insights.png)
 
 
 
@@ -46,7 +46,7 @@ Can Transformer perform 2D object- and region-level recognition from a pure sequ
 
 An illustration of the YOLOS architecture is shown below:
 
-![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/yolos.PNG)
+![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/yolos.png)
 
 
 
@@ -55,7 +55,8 @@ The model was compiled in Microsoft Azure using PyTorch packages with 25 epochs.
 We chose YOLOS as our base network due to its short run-time. This model performed very well on our dataset and achieved a mean average precision (mAP) of 73.6 for tool detection.
 The loss and mAP@K graphs are shown below.
 
-![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/graphs.PNG)
+![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/graphs1.png)
+![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/graphs2.png)
 
 
 
