@@ -10,10 +10,9 @@ This is a class project as part of 097222 Computer Vision Seminar @ Technion.
 
 - [SurgeryToolsDetection](#surgery-tools-detection)
   * [Files in The Repository](#files-in-the-repository)
-  * [Dataset Acquisition](#dataset-acquisition) 
-  * [Proposed CNN Model](#proposed-cnn-model)
+  * [Dataset](#dataset) 
+  * [Model](#model)
   * [Results](#results)
-  * [Presentation](#presentation)
   * [References](#references)
 
 
