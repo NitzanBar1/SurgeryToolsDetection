@@ -48,7 +48,7 @@ An illustration of the YOLOS architecture is shown below:
 
 
 ## Results
-The proposed CNN model was compiled in Microsoft Azure using PyTorch packages with 25 epochs. 
+The model was compiled in Microsoft Azure using PyTorch packages with 25 epochs. 
 We chose YOLOS as our base network due to its short run-time. This model performed very well on our dataset and achieved a mean average precision (mAP) of 73.6 for tool detection.
 The loss and mAP@K graphs are shown below.
 
