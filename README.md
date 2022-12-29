@@ -60,19 +60,20 @@ The loss and mAP@K graphs are shown below.
 Model detections:
 ![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/results.png)
 
-Evaluation metrics:\n
-Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.593\n
-Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.7360 
-Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.713
-Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
-Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.595
-Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.591
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.732
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.777
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.790
-Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.749
-Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.792 
+Evaluation metrics:
+
+|Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.593|
+|Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.7360|
+|Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.713|
+|Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000|
+|Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.595|
+|Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.591|
+|Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.732|
+|Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.777|
+|Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.790|
+|Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000|
+|Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.749|
+|Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.792|
 
 
 
