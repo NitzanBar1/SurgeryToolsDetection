@@ -48,7 +48,7 @@ class ImageClassificationCollator:
 
     def __call__(self, batch):
         pixel_values = [item[0] for item in batch]
-        encoding = self.feature_extractor.pad(pixel_values, return_tensors="pt")
+        encoding = self.feature_extractor(pixel_values, return_tensors="pt")
         labels = [item[1] for item in batch]
         batch = {}
         batch['pixel_values'] = encoding['pixel_values']
@@ -138,8 +138,7 @@ class Detector(pl.LightningModule):
             
 
     def configure_optimizers(self):
-        optimizer = torch.optim.AdamW(self.parameters(), lr=self.lr, 
-                                      weight_decay=self.weight_decay)
+        optimizer = torch.optim.AdamW(self.parameters(), lr=self.lr, weight_decay=self.weight_decay)
         return optimizer
 
 
@@ -150,6 +149,7 @@ if __name__ == '__main__':
     parser.add_argument('--lr', required=True)
     parser.add_argument('--weight_decay', required=True)
     parser.add_argument('--max_epochs', required=True)
+    parser.add_argument('--hf_model', required=True, help="huggingface model")
     args = parser.parse_args()
 
     if not(os.path.exists('/home/student/detr')):
@@ -170,7 +170,7 @@ if __name__ == '__main__':
     print(dataset.location)
 
     # Init Feature Extractor, Model, Data Loaders    
-    feature_extractor = AutoFeatureExtractor.from_pretrained("hustvl/yolos-small", size=640, max_size=640)
+    feature_extractor = AutoFeatureExtractor.from_pretrained(args.hf_model, size=640, max_size=640)
     train_dataset = CocoDetection(img_folder=(dataset.location + '/train'), feature_extractor=feature_extractor)
     val_dataset = CocoDetection(img_folder=(dataset.location + '/valid'), feature_extractor=feature_extractor, train=False)
     test_dataset = CocoDetection(img_folder=(dataset.location + '/test'), feature_extractor=feature_extractor, train=False)
@@ -210,7 +210,7 @@ if __name__ == '__main__':
     # Define Model
     cats = train_dataset.coco.cats
     id2label = {k: v['name'] for k,v in cats.items()}
-    model = AutoModelForObjectDetection.from_pretrained("hustvl/yolos-tiny", 
+    model = AutoModelForObjectDetection.from_pretrained(args.hf_model, 
     num_labels=len(id2label), ignore_mismatched_sizes=True)
     detector = Detector(model=model, lr=lr, weight_decay=weight_decay, batch_size=batch_size, hparams=hparams)
     # for debug
@@ -248,5 +248,6 @@ if __name__ == '__main__':
     """
 
 
-# run command: python3 train_yolos.py --batch_size 4 --weight_decay 1e-4 --lr 2e-5 --max_epochs 25
+# run command: python3 train_yolos.py --batch_size 4 --weight_decay 1e-4 --lr 2e-5 --max_epochs 25 --hf_model hustvl/yolos-small
+# run command: python3 train_yolos.py --batch_size 4 --weight_decay 1e-4 --lr 2e-5 --max_epochs 25 --hf_model facebook/detr-resnet-101
 # tensor board command:  tensorboard --logdir=lightning_logs

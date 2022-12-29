@@ -272,6 +272,7 @@ dependencies:
     - requests-toolbelt==0.10.1
     - roboflow==0.2.21
     - smmap==5.0.0
+    - timm==0.6.12
     - urllib3==1.26.6
     - wget==3.2
 prefix: /anaconda/envs/clean_env

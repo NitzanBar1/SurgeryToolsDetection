@@ -51,6 +51,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser('Predict on image')
     parser.add_argument('--image_file', required=True)
     parser.add_argument('--model_path', required=True)
+    parser.add_argument('--hf_model', required=True)
     args = parser.parse_args()
 
     # Set global seed
@@ -59,11 +60,11 @@ if __name__ == '__main__':
 
     """## Init Feature Extractor, Model"""
     # Init Feature Extractor   
-    feature_extractor = AutoFeatureExtractor.from_pretrained("hustvl/yolos-small", size=640, max_size=640)
+    feature_extractor = AutoFeatureExtractor.from_pretrained(args.hf_model, size=640, max_size=640)
 
     # Define Model
     num_labels = 8
-    model = AutoModelForObjectDetection.from_pretrained("hustvl/yolos-tiny", 
+    model = AutoModelForObjectDetection.from_pretrained(args.hf_model, 
     num_labels=num_labels, ignore_mismatched_sizes=True)
 
     """## Load fine-tuned model for inference """
@@ -141,4 +142,4 @@ if __name__ == '__main__':
 
     cv2.imwrite(output_file, image)
 
-# Run Command: python3 predict.py --image_file HW1_dataset/HW1_dataset/images/P016_balloon1_9.jpg --model_path models/yolos/08122022_143316_model.pth
+# Run Command: python3 predict.py --image_file HW1_dataset/HW1_dataset/images/P016_balloon1_9.jpg --model_path models/yolos/29122022_162027_model.pth --hf_model facebook/detr-resnet-101
