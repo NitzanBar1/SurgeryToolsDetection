@@ -11,7 +11,7 @@ This is a class project as part of 097222 Computer Vision Seminar @ Technion.
 - [SurgeryToolsDetection](#surgery-tools-detection)
   * [Files in The Repository](#files-in-the-repository)
   * [Dataset](#dataset) 
-  * [YOLOS Model](#yolos-model)
+  * [Models](#models)
   * [Results](#results)
   * [References](#references)
 
@@ -35,17 +35,26 @@ This is a class project as part of 097222 Computer Vision Seminar @ Technion.
 
 
 
-## YOLOS Model
-•	The YOLOS model was proposed in You Only Look at One Sequence: Rethinking Transformer in Vision through Object Detection by Yuxin Fang, Bencheng Liao, Xinggang Wang, Jiemin Fang, Jiyang Qi, Rui Wu, Jianwei Niu, Wenyu Liu. YOLOS proposes to just leverage the plain Vision Transformer (ViT) for object detection, inspired by DETR. It turns out that a base-sized encoder-only Transformer can also achieve 42 AP on COCO, like DETR and much more complex frameworks such as Faster R-CNN.
-
-•	The abstract from the paper is the following:
-Can Transformer perform 2D object- and region-level recognition from a pure sequence-to-sequence perspective with minimal knowledge about the 2D spatial structure? To answer this question, we present You Only Look at One Sequence (YOLOS), a series of object detection models based on the vanilla Vision Transformer with the fewest possible modifications, region priors, as well as inductive biases of the target task. We find that YOLOS pre-trained on the mid-sized ImageNet-1k dataset only can already achieve quite competitive performance on the challenging COCO object detection benchmark, e.g., YOLOS-Base directly adopted from BERT-Base architecture can obtain 42.0 box AP on COCO val. We also discuss the impacts as well as limitations of current pre-train schemes and model scaling strategies for Transformer in vision through YOLOS.
-
-•	We replaced COCO classification head with a custom head.
+## Models
+•	YOLOS architecture:  
+YOLOS model fine-tuned on COCO 2017 object detection (118k annotated images). It was introduced in the paper You Only Look at One Sequence: Rethinking Transformer in Vision through Object Detection by Fang et al. and first released in this repository.  
+YOLOS is a Vision Transformer (ViT) trained using the DETR loss. Despite its simplicity, a base-sized YOLOS model is able to achieve 42 AP on COCO validation 2017 (similar to DETR and more complex frameworks such as Faster R-CNN).  
+The model is trained using a "bipartite matching loss": one compares the predicted classes + bounding boxes of each of the N = 100 object queries to the ground truth annotations, padded up to the same length N (so if an image only contains 4 objects, 96 annotations will just have a "no object" as class and "no bounding box" as bounding box). The Hungarian matching algorithm is used to create an optimal one-to-one mapping between each of the N queries and each of the N annotations. Next, standard cross-entropy (for the classes) and a linear combination of the L1 and generalized IoU loss (for the bounding boxes) are used to optimize the parameters of the model.  
+We replaced COCO classification head with a custom head.
 
 An illustration of the YOLOS architecture is shown below:
 
 ![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/yolos.png)
+
+
+•	DETR Architecture:
+DEtection TRansformer (DETR) model trained end-to-end on COCO 2017 object detection (118k annotated images). It was introduced in the paper End-to-End Object Detection with Transformers by Carion et al. and first released in this repository.  
+The DETR model is an encoder-decoder transformer with a convolutional backbone. Two heads are added on top of the decoder outputs in order to perform object detection: a linear layer for the class labels and a MLP (multi-layer perceptron) for the bounding boxes. The model uses so-called object queries to detect objects in an image. Each object query looks for a particular object in the image. For COCO, the number of object queries is set to 100.
+
+An illustration of the DETR architecture is shown below:
+
+![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/detr.png)
+
 
 
 
