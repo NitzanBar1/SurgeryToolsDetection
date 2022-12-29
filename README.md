@@ -62,18 +62,18 @@ Model detections:
 
 Evaluation metrics:
 
-|Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.593|
-|Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.7360|
-|Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.713|
-|Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000|
-|Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.595|
-|Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.591|
-|Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.732|
-|Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.777|
-|Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.790|
-|Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000|
-|Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.749|
-|Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.792|
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.593  
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.7360  
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.713  
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000  
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.595  
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.591  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.732  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.777  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.790  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.749  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.792  
 
 
 
