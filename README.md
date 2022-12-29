@@ -96,18 +96,19 @@ Model detections:
 ![alt text](https://github.com/NitzanBar1/SurgeryToolsDetection/blob/main/images/results_detr.png)
 
 Evaluation metrics:  
-Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.593  
-Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.7360  
-Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.713  
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.595  
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.746  
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.715  
 Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000  
-Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.595  
-Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.591  
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.732  
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.777  
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.790  
-Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000  
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.749  
-Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.792  
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.380  
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.668  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.756  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.830  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.830  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000   
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.792  
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.846  
+
 
 ## References
 [1] Goldbraikh, A., D’Angelo, A.L., Pugh, C.M. and Laufer, S., 2022. Video-based fully automatic assessment of open surgery suturing skills. International Journal of Computer Assisted Radiology and Surgery, 17(3), pp.437-448.
